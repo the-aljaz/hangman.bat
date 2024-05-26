@@ -83,7 +83,7 @@ if %attempts% equ 6 (
 
 echo.
 echo Guessed Word: !guessed_word!
-set "guessed_word="
+
 echo.
 
 rem Check if the player has guessed the word
@@ -125,6 +125,7 @@ set "current_word=%WORD%"
 for /l %%i in (0,1,6) do (
     set "letter=!current_word:~%%i,1!"
     if "!letter!"=="!guess!" (
+        set "guessed_word="
         set "guessed_word=!guessed_word!!guess!"
         set "found=true"
     ) else (
