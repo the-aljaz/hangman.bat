@@ -120,12 +120,12 @@ if not "%guess%"=="" (
 )
 
 rem Check if the guessed letter is in the word
+set "guessed_word="
 set "found=false"
 set "current_word=%WORD%"
 for /l %%i in (0,1,6) do (
     set "letter=!current_word:~%%i,1!"
     if "!letter!"=="!guess!" (
-        set "guessed_word="
         set "guessed_word=!guessed_word!!guess!"
         set "found=true"
     ) else (
