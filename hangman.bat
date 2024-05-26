@@ -83,6 +83,7 @@ if %attempts% equ 6 (
 
 echo.
 echo Guessed Word: !guessed_word!
+set "guessed_word="
 echo.
 
 rem Check if the player has guessed the word
